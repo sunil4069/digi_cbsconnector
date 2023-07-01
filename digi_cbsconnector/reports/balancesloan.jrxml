@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1234cb93-7b26-4b9a-8f3c-8e7f4991b0b3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<queryString language="SQL">
+		<![CDATA[select * from srfdb.currentloanstatus]]>
+	</queryString>
+	<field name="acno" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="acno"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="currentloanstatus"/>
+	</field>
+	<field name="CodeNo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CodeNo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="currentloanstatus"/>
+	</field>
+	<field name="tser" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="tser"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="currentloanstatus"/>
+	</field>
+	<field name="iedate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="iedate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="currentloanstatus"/>
+	</field>
+	<field name="indate" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="indate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="currentloanstatus"/>
+	</field>
+	<field name="ABal" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="ABal"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="currentloanstatus"/>
+	</field>
+	<field name="intdr" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="intdr"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="currentloanstatus"/>
+	</field>
+	<field name="intCr" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="intCr"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="currentloanstatus"/>
+	</field>
+	<field name="intbal" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="intbal"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="currentloanstatus"/>
+	</field>
+	<field name="incintdr" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="incintdr"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="currentloanstatus"/>
+	</field>
+	<field name="incintcr" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="incintcr"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="currentloanstatus"/>
+	</field>
+	<field name="incintbal" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="incintbal"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="currentloanstatus"/>
+	</field>
+	<field name="pintbal" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="pintbal"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="currentloanstatus"/>
+	</field>
+	<field name="TCollection" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="TCollection"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="currentloanstatus"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="42" y="0" width="145" height="30" uuid="273cc84b-3070-4d76-90cd-14de76040916">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="46c16c4a-51db-4dbc-85e7-0daa9ed0c69e"/>
+				</reportElement>
+				<text><![CDATA[acno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="0" width="100" height="30" uuid="a1113075-b845-4bc4-bf3b-40058f79023a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="219eebc4-2072-4393-ad25-dc395f5d0222"/>
+				</reportElement>
+				<text><![CDATA[CodeNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="287" y="0" width="100" height="30" uuid="f7d7d57d-86bc-42d4-b95f-ad84e4a98a7e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="255c0bb1-0889-4a63-b6e5-b4b8ddd6ae84"/>
+				</reportElement>
+				<text><![CDATA[ABal]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="42" y="0" width="120" height="30" uuid="480f8f4d-aa58-48df-a91a-92d8b128757b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="46c16c4a-51db-4dbc-85e7-0daa9ed0c69e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{acno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="162" y="0" width="125" height="30" uuid="37dfaf50-9847-4f31-9c7c-7398bd3df6f0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="219eebc4-2072-4393-ad25-dc395f5d0222"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CodeNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="287" y="0" width="100" height="30" uuid="2be441d2-0bfd-4852-ab61-f5806fb7c26e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="255c0bb1-0889-4a63-b6e5-b4b8ddd6ae84"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ABal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

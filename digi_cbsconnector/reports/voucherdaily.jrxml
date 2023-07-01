@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="voucherdaily" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0960da73-b8af-4487-95fa-25cc50e22700">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="trdate" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT   transaction_date, accode ,sum(amount) as amount from srfdb_online.trsummary
+group by transaction_date, accode
+having transaction_date=$P{trdate}]]>
+	</queryString>
+	<field name="transaction_date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="transaction_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fund_transfer_transaction"/>
+	</field>
+	<field name="accode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="accode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="account_code"/>
+	</field>
+	<field name="amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fund_transfer_transaction"/>
+	</field>
+	<variable name="amount1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{amount}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="131" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="5" width="780" height="25" uuid="b48e046b-e7cc-4212-abd8-9e3ebd4d445b"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Agricultural Development Bank Ltd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="780" height="25" uuid="d1091e9c-37fc-4563-bea9-ba0ef32cf3fb"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Office Of Staff Retirement Fund, Ramshahpath, Kathmandu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="55" width="780" height="25" uuid="ed97d99a-4964-4f3b-888e-ba8035e6b8d3"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Account Voucher]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="540" y="80" width="150" height="30" uuid="8c983580-1794-4655-915d-ebed76bbaf0b"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date :"+$P{trdate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="0" width="180" height="20" uuid="f99bae5e-96e8-4e20-9dca-0a65d7c5588d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d4a2dce1-d31b-4e8d-ab9d-69ca002bc7a5"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="0" width="150" height="20" uuid="361a1f9a-210a-4745-84d0-140a52206f7b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="529a4cac-4ae9-45bc-834c-093951aa1cd7"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dr]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="0" width="131" height="20" uuid="5abeaf06-c694-499e-a0ad-dafdfa0cdc9b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="529a4cac-4ae9-45bc-834c-093951aa1cd7"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cr]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="110" y="0" width="180" height="20" uuid="2b5294af-bff7-44d4-8fda-f2f31fd90761">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d4a2dce1-d31b-4e8d-ab9d-69ca002bc7a5"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{accode}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#">
+				<reportElement x="290" y="0" width="150" height="20" uuid="300cd8c6-ea81-40fa-9ed7-fdcf0acb192f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="529a4cac-4ae9-45bc-834c-093951aa1cd7"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="440" y="0" width="131" height="20" uuid="b7f6ea52-7c0b-4969-a2a3-1e6a67288cf5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="529a4cac-4ae9-45bc-834c-093951aa1cd7"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="133" splitType="Stretch">
+			<textField pattern="#,##0.00#">
+				<reportElement x="290" y="0" width="150" height="20" uuid="c740d5e3-7cb4-4d20-866f-49fd0ff96f30">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{amount1}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="-16" y="21" width="446" height="20" uuid="2f3c66f1-1471-4422-823c-a3e431b6f8fc"/>
+				<subreportParameter name="trdate">
+					<subreportParameterExpression><![CDATA[$P{trdate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["c:/reports/voucherdaily1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="-10" y="98" width="550" height="30" uuid="3de063c1-9595-4673-8e96-79cefaf876a4"/>
+				<subreportParameter name="trdate">
+					<subreportParameterExpression><![CDATA[$P{trdate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["c:/reports/voucherdaily2.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="110" y="0" width="180" height="20" uuid="2b583df6-27cb-41a4-b18f-e3b0e048fdfe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d4a2dce1-d31b-4e8d-ab9d-69ca002bc7a5"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Debit Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="0" width="131" height="20" uuid="8ab7128d-cccc-47c4-af3d-fd801bf8a6d0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="529a4cac-4ae9-45bc-834c-093951aa1cd7"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

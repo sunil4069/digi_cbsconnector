@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+
+.my-label{
+  width: 100px;
+  padding: 5px 5px;
+  margin: 0 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.my-input[type=text], select{
+  width: 250px;
+  padding: 5px 5px;
+  margin: 0 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+   font-weight: bold;
+}
+.inputfont{
+	font-weight: bold;
+	font-size:16px;
+}
+
+.inputpreeti{
+  font-family:preeti;
+  font-size:20px;
+  font-weight:bold;
+}
+.inputsunil{
+  font-family:sunil_1;
+  font-size:20px;
+  font-weight:bold;
+}
+label.my-label-preeti{
+  font-family:preeti;
+  font-size:20px;
+}
+
+label.mylabel{
+   font-size:16px;
+}
+
+.my-submit-input[type=submit] {
+  width: 200px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 200px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+.my-submit-input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.my-div {
+	width: 400px;
+margin-top: 0px;
+margin-left: 0px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 5px;
+}
+.my-div2 {
+	width: 400px;
+margin-top: 25px;
+margin-left: 530px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+p.a {
+  font-family: "Times New Roman", Times, serif;
+  color: red;
+  font-size:16px;
+  font-weight:bold;
+}
+
+p.b {
+	text-align=center;
+  color: red;
+  font-size:16px;
+  font-weight:bold;
+}
+
+table td, table th {
+    border: 1px solid #000000;
+     padding:0.5em;
+     font-size:12px;
+     }
+ table th{
+text-align:center;
+border: 1px solid #000000;
+     padding:0.5em;
+     font-size:12px;
+}  
